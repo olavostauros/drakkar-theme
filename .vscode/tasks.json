@@ -17,7 +17,7 @@
         {
             "label": "WP-CLI Info",
             "type": "shell",
-            "command": "vendor/bin/wp --info",
+            "command": "wp --info",
             "group": "build",
             "presentation": {
                 "echo": true,
@@ -30,7 +30,7 @@
         {
             "label": "Install WordPress",
             "type": "shell",
-            "command": "vendor/bin/wp core install --url=localhost:8000 --title='WordPress Site' --admin_user=admin --admin_password=admin --admin_email=admin@example.com",
+            "command": "wp core install --url=localhost:8000 --title='WordPress Site' --admin_user=admin --admin_password=admin --admin_email=admin@example.com",
             "group": "build",
             "presentation": {
                 "echo": true,

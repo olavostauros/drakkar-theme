@@ -1,15 +1,33 @@
 <?php return array(
     'root' => array(
         'name' => 'olavo/drakkar-theme',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '597b5c4932ae01dcfe460fd37207f6578a510468',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'aaemnnosttv/wp-sqlite-db' => array(
+            'pretty_version' => 'v1.3.2',
+            'version' => '1.3.2.0',
+            'reference' => '04fd4e7b3a4ab0a77657d20cafdcf07efe7f935b',
+            'type' => 'wordpress-dropin',
+            'install_path' => __DIR__ . '/../../wp-content/wp-sqlite-db',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'composer/installers' => array(
+            'pretty_version' => 'v2.3.0',
+            'version' => '2.3.0.0',
+            'reference' => '12fb2dfe5e16183de69e784a7b84046c43d97e8e',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/./installers',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'mustache/mustache' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -17,9 +35,9 @@
             ),
         ),
         'olavo/drakkar-theme' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '597b5c4932ae01dcfe460fd37207f6578a510468',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
