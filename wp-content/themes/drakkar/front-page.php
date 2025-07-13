@@ -4,7 +4,7 @@
  * Front Page Template
  * 
  * Template for the front page (homepage) of the Drakkar website
- * Features the hero section as the main landing area
+ * Features hero section and statistics as the main landing area
  *
  * @package Drakkar
  */
@@ -14,6 +14,9 @@ get_header();
 
 <!-- Hero Section -->
 <?php get_template_part('template-parts/hero'); ?>
+
+<!-- Statistics Section -->
+<?php get_template_part('template-parts/statistics'); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">

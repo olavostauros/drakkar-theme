@@ -2,18 +2,19 @@
 
 ## Overview
 
-The Hero component is a streamlined, full-width landing section designed for the Drakkar precision agriculture website. It features a video background, animated statistics, call-to-action button, and an integrated WhatsApp widget with a simplified, performance-optimized structure.
+The Hero component is a streamlined, full-width landing section designed for the Drakkar precision agriculture website. It features a video background, call-to-action button, and an integrated WhatsApp widget with a simplified, performance-optimized structure.
 
 ## Files Structure
 
 ```
 wp-content/themes/drakkar/
 ├── template-parts/
-│   └── hero.php                 # Main hero component template (72 lines)
+│   ├── hero.php                 # Main hero component template
+│   └── statistics.php           # Statistics component (separate)
 ├── css/
-│   └── hero.css                 # Hero-specific styles (353 lines)
+│   └── hero.css                 # Hero-specific styles
 ├── js/
-│   └── hero.js                  # Hero functionality and animations (85 lines)
+│   └── hero.js                  # Hero functionality and animations
 └── front-page.php               # Example implementation
 ```
 
@@ -33,18 +34,7 @@ wp-content/themes/drakkar/
 - **CTA Button**: "Conheça a plataforma" linking to #plataforma (hardcoded)
 - **Responsive Typography**: Scales with clamp() and media queries
 
-### 3. Statistics Section
-
-- 5 hardcoded performance metrics with animated counters:
-  - +1M Amostras coletadas
-  - +1.200 Clientes ativos
-  - +5M Hectares influenciados
-  - +3.700 Fazendas atendidas
-  - +1,5M Mapas gerados/ano
-- Direct grid layout without wrapper divs
-- Intersection Observer for scroll-triggered animations
-
-### 4. WhatsApp Widget
+### 3. WhatsApp Widget
 
 - Fixed position floating button
 - Pulse animation to draw attention
@@ -57,9 +47,10 @@ wp-content/themes/drakkar/
 
 ```php
 <?php get_template_part('template-parts/hero'); ?>
+<?php get_template_part('template-parts/statistics'); ?>
 ```
 
-**Note**: This component no longer supports ACF (Advanced Custom Fields) integration. All content is hardcoded for maximum performance and simplicity.
+**Note**: Statistics have been moved to a separate component (`statistics.php`) for better modularity. This component no longer supports ACF (Advanced Custom Fields) integration. All content is hardcoded for maximum performance and simplicity.
 
 ## Customization
 
@@ -91,7 +82,7 @@ The hero uses the following color scheme defined in CSS:
 }
 
 .stat-label {
-  color: #333333; /* Dark gray for statistics */
+  color: #333333; /* Dark gray for statistics - now in statistics.php */
 }
 ```
 
@@ -142,10 +133,10 @@ To customize content, directly edit the `hero.php` file:
 
 ### Statistics Data
 
-To customize statistics, modify the hardcoded values in `hero.php`:
+Statistics are now in a separate component. To customize statistics, modify the `statistics.php` file:
 
 ```php
-<!-- Example modifications -->
+<!-- Example modifications in statistics.php -->
 <div class="stat-item animate-countUp" data-delay="0">
     <div class="stat-number" data-target="2000000">+2M</div>
     <div class="stat-label">Custom Metric</div>
