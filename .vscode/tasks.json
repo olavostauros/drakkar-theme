@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start WordPress Development Server",
+            "type": "shell",
+            "command": "php -S localhost:8000",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "WP-CLI Info",
+            "type": "shell",
+            "command": "vendor/bin/wp --info",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install WordPress",
+            "type": "shell",
+            "command": "vendor/bin/wp core install --url=localhost:8000 --title='WordPress Site' --admin_user=admin --admin_password=admin --admin_email=admin@example.com",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Composer Install",
+            "type": "shell",
+            "command": "composer install",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
