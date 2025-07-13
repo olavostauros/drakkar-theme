@@ -19,11 +19,12 @@ function drakkar_theme_setup()
 	// Add theme support
 	add_theme_support('title-tag');
 	add_theme_support('custom-logo', array(
-		'height'      => 100,
-		'width'       => 200,
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array('site-title', 'site-description'),
+		'height'         => 100,
+		'width'          => 300,
+		'flex-height'    => true,
+		'flex-width'     => true,
+		'header-text'    => array('site-title', 'site-description'),
+		'unlink-homepage-logo' => false,
 	));
 	add_theme_support('menus');
 	add_theme_support('post-thumbnails');
@@ -33,7 +34,10 @@ function drakkar_theme_setup()
 		'comment-list',
 		'gallery',
 		'caption',
+		'navigation-widgets',
 	));
+	add_theme_support('responsive-embeds');
+	add_theme_support('wp-block-styles');
 
 	// Register navigation menus
 	register_nav_menus(array(
@@ -61,20 +65,21 @@ add_action('wp_enqueue_scripts', 'drakkar_scripts');
 function drakkar_get_logo()
 {
 	if (has_custom_logo()) {
-		return get_custom_logo();
+		$custom_logo_id = get_theme_mod('custom_logo');
+		$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+		if ($logo) {
+			return '<img src="' . esc_url($logo[0]) . '" alt="' . esc_attr(get_bloginfo('name')) . ' - Agricultura de Precisão" class="custom-logo" />';
+		}
 	} else {
 		// Fallback to logo in wp-content/logos directory
 		$logo_svg = home_url('/wp-content/logos/logo-drakkar-full.svg');
 		$logo_png = home_url('/wp-content/logos/logo-drakkar-full.png');
 
 		if (file_exists(ABSPATH . 'wp-content/logos/logo-drakkar-full.svg')) {
-			return '<a href="' . esc_url(home_url('/')) . '" class="custom-logo-link" rel="home">
-                        <img src="' . esc_url($logo_svg) . '" class="custom-logo" alt="' . esc_attr(get_bloginfo('name')) . '" />
-                    </a>';
+			return '<img src="' . esc_url($logo_svg) . '" class="custom-logo" alt="' . esc_attr(get_bloginfo('name')) . ' - Agricultura de Precisão" />';
 		} elseif (file_exists(ABSPATH . 'wp-content/logos/logo-drakkar-full.png')) {
-			return '<a href="' . esc_url(home_url('/')) . '" class="custom-logo-link" rel="home">
-                        <img src="' . esc_url($logo_png) . '" class="custom-logo" alt="' . esc_attr(get_bloginfo('name')) . '" />
-                    </a>';
+			return '<img src="' . esc_url($logo_png) . '" class="custom-logo" alt="' . esc_attr(get_bloginfo('name')) . ' - Agricultura de Precisão" />';
 		}
 	}
 	return false;
@@ -157,10 +162,10 @@ add_action('wp_head', 'drakkar_viewport_meta');
 function drakkar_fallback_menu()
 {
 	echo '<ul id="primary-menu" class="menu">';
-	echo '<li><a href="' . esc_url(home_url('/')) . '">Lavoura Online</a></li>';
-	echo '<li><a href="#agricultura">Agricultura de Precisão</a></li>';
-	echo '<li><a href="#historias">Histórias de Sucesso</a></li>';
-	echo '<li><a href="#sobre">A Drakkar</a></li>';
+	echo '<li><a href="#lavoura-online">Lavoura Online</a></li>';
+	echo '<li><a href="#agricultura-precisao">Agricultura de Precisão</a></li>';
+	echo '<li><a href="#historias-sucesso">Histórias de Sucesso</a></li>';
+	echo '<li><a href="#a-drakkar">A Drakkar</a></li>';
 	echo '<li><a href="#newsletter">Newsletter</a></li>';
 	echo '</ul>';
 }

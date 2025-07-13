@@ -1,45 +1,59 @@
-# Drakkar WordPress Theme
+# Drakkar Precision Agriculture Website Prompt
 
-Custom WordPress theme for **Drakkar Agricultura de Precisão** - Brazilian precision agriculture tech company.
+## Project Overview
 
-## Tech Stack
+Create a modern, responsive website for Drakkar, a precision agriculture technology company that provides soil fertility control solutions.
 
-- WordPress, PHP, WP-CLI, Composer
-- HTML5, CSS, Vanilla JavaScript
-- Development: Windows 11, PowerShell, VS Code
+## Key Components
 
-## Features
+### Header Navigation
 
-- Responsive homepage (see `HOME.png` reference)
-- Hero section: "Chegou a nova era da Agricultura de Precisão"
-- Navigation: Lavoura Online, Agricultura de Precisão, Histórias de Sucesso, A Drakkar, Newsletter
-- Animated stats: 1M+ samples, 1.2K+ clients, 5M+ hectares, 3.7K+ farms, 1.5M+ maps/year
-- WhatsApp floating button
-- WordPress theme standards with customizer support
+- Logo: Drakkar with tagline "AGRICULTURA DE PRECISÃO"
+- Navigation menu: Lavoura Online, Agricultura de Precisão, Histórias de Sucesso, A Drakkar, Newsletter
+- CTA button: "Acesse seu projeto"
 
-## Structure
+### Hero Section
 
-```
-wp-content/themes/drakkar/
-├── style.css
-├── index.php
-├── functions.php
-├── header.php
-├── footer.php
-└── front-page.php
-```
+- Background: High-quality image of farmer with tablet in agricultural field
+- Headline: "Chegou a nova era da Agricultura de Precisão"
+- Subheadline: "A tecnologia que coloca o controle da fertilidade do solo na palma da sua mão"
+- Primary CTA: "Conheça a plataforma" (red button)
 
-## Design
+### Statistics Section
 
-- Colors: Agricultural greens, earth tones, red/orange accents
-- Typography: Modern sans-serif with clear hierarchy
-- Layout: Mobile-first responsive (CSS Grid/Flexbox)
+Display key metrics in prominent numbers:
 
-## Quick Start
+- +1M Amostras coletadas
+- +1.200 Clientes ativos
+- +5M Hectares influenciados
+- +3.700 Fazendas atendidas
+- +1,5M Mapas gerados/ano
 
-```bash
-php -S localhost:8000                    # Start server
-wp core install [options]                # Install WordPress (requires global WP-CLI)
-```
+### Additional Features
 
-VS Code tasks available for common commands.
+- WhatsApp integration widget: "Seja bem-vindo a Drakkar! Como podemos ajudá-lo?"
+- Responsive design for mobile and desktop
+- Professional color scheme: Red (#C53E3E), Blue tones, White, Green accents
+
+## Technical Requirements
+
+- WordPress theme structure
+- Modern CSS/SCSS
+- Mobile-first responsive design
+- Fast loading times
+- SEO optimized
+- Accessibility compliant
+
+## Brand Guidelines
+
+- Primary color: Red (#C53E3E)
+- Typography: Clean, modern sans-serif
+- Imagery: Professional agricultural photography
+- Tone: Professional, trustworthy, innovative
+
+## Content Strategy
+
+- Focus on technology and precision
+- Emphasize results and impact
+- Highlight expertise and scale
+- Clear call-to-action hierarchy
