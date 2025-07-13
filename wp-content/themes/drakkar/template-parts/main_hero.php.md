@@ -9,7 +9,7 @@ The Hero component is a streamlined, full-width landing section designed for the
 ```
 wp-content/themes/drakkar/
 ├── template-parts/
-│   ├── hero.php                 # Main hero component template
+│   ├── main_hero.php            # Main hero component template
 │   └── statistics.php           # Statistics component (separate)
 ├── css/
 │   └── hero.css                 # Hero-specific styles
@@ -46,7 +46,7 @@ wp-content/themes/drakkar/
 ### Basic Implementation
 
 ```php
-<?php get_template_part('template-parts/hero'); ?>
+<?php get_template_part('template-parts/main_hero'); ?>
 <?php get_template_part('template-parts/statistics'); ?>
 ```
 
@@ -122,10 +122,10 @@ Responsive font sizes are defined for different breakpoints:
 
 ### Content Modification
 
-To customize content, directly edit the `hero.php` file:
+To customize content, directly edit the `main_hero.php` file:
 
 ```php
-<!-- Modify these lines in hero.php -->
+<!-- Modify these lines in main_hero.php -->
 <h1 class="hero-headline animate-fadeInUp">Your Custom Headline</h1>
 <p class="hero-subheadline animate-fadeInUp delay-500">Your custom subheadline</p>
 <a href="#your-target" class="hero-cta-button animate-fadeInUp delay-800">Your CTA Text</a>

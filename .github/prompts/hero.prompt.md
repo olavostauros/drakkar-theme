@@ -156,7 +156,7 @@ Each statistic should include:
 
 ```php
 // Hero section template part
-get_template_part('template-parts/hero-section');
+get_template_part('template-parts/main_hero');
 ```
 
 ## Browser Support

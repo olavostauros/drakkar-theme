@@ -13,7 +13,7 @@ get_header();
 ?>
 
 <!-- Hero Section -->
-<?php get_template_part('template-parts/hero'); ?>
+<?php get_template_part('template-parts/main_hero'); ?>
 
 <!-- Statistics Section -->
 <?php get_template_part('template-parts/statistics'); ?>
