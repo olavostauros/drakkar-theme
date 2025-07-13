@@ -52,9 +52,6 @@ function drakkar_scripts()
 
 	// Enqueue theme JavaScript
 	wp_enqueue_script('drakkar-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true);
-
-	// Enqueue responsive script for mobile menu
-	wp_enqueue_script('drakkar-mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'drakkar_scripts');
 
