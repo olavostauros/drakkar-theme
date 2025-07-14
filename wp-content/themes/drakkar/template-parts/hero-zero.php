@@ -12,7 +12,7 @@
 	<!-- Video Background -->
 	<div class="hero-video-container">
 		<video class="hero-video" autoplay muted loop playsinline preload="metadata">
-			<source src="<?php echo home_url('/wp-content/hero/hero_video.mp4'); ?>" type="video/mp4">
+			<source src="<?php echo home_url('/wp-content/hero-media/hero-video.mp4'); ?>" type="video/mp4">
 		</video>
 		<div class="hero-overlay"></div>
 	</div>
@@ -43,6 +43,6 @@
 
 <?php
 // Enqueue hero-specific styles and scripts
-wp_enqueue_style('drakkar-hero', get_template_directory_uri() . '/css/hero.css', array(), '1.0.0');
-wp_enqueue_script('drakkar-hero', get_template_directory_uri() . '/js/hero.js', array(), '1.0.0', true);
+wp_enqueue_style('drakkar-hero', get_template_directory_uri() . '/css/hero-zero.css', array(), '1.0.0');
+wp_enqueue_script('drakkar-hero', get_template_directory_uri() . '/js/hero-main.js', array(), '1.0.0', true);
 ?>

@@ -9,12 +9,12 @@ The Hero component is a streamlined, full-width landing section designed for the
 ```
 wp-content/themes/drakkar/
 ├── template-parts/
-│   ├── main_hero.php            # Main hero component template
+│   ├── hero-zero.php            # Main hero component template
 │   └── statistics.php           # Statistics component (separate)
 ├── css/
-│   └── hero.css                 # Hero-specific styles
+│   └── hero-zero.css            # Hero-specific styles
 ├── js/
-│   └── hero.js                  # Hero functionality and animations
+│   └── hero-main.js             # Hero functionality and animations
 └── front-page.php               # Example implementation
 ```
 
@@ -22,7 +22,7 @@ wp-content/themes/drakkar/
 
 ### 1. Video Background
 
-- Uses `hero_video.mp4` from `/wp-content/hero/` directory
+- Uses `hero-video.mp4` from `/wp-content/hero-media/` directory
 - Auto-play with muted audio and loop
 - Mobile-optimized with playsinline attributes
 - No fallback complexity - direct video implementation
@@ -46,7 +46,7 @@ wp-content/themes/drakkar/
 ### Basic Implementation
 
 ```php
-<?php get_template_part('template-parts/main_hero'); ?>
+<?php get_template_part('template-parts/hero-zero'); ?>
 <?php get_template_part('template-parts/statistics'); ?>
 ```
 
@@ -122,10 +122,10 @@ Responsive font sizes are defined for different breakpoints:
 
 ### Content Modification
 
-To customize content, directly edit the `main_hero.php` file:
+To customize content, directly edit the `hero-zero.php` file:
 
 ```php
-<!-- Modify these lines in main_hero.php -->
+<!-- Modify these lines in hero-zero.php -->
 <h1 class="hero-headline animate-fadeInUp">Your Custom Headline</h1>
 <p class="hero-subheadline animate-fadeInUp delay-500">Your custom subheadline</p>
 <a href="#your-target" class="hero-cta-button animate-fadeInUp delay-800">Your CTA Text</a>

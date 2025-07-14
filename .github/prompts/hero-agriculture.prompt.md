@@ -21,7 +21,7 @@ com foco em resultados reais e solo equilibrado
 
 ### Background & Layout
 
-- Background: `hero_agriculture.png` with dark overlay (40% opacity)
+- Background: `hero-agriculture.png` with dark overlay (40% opacity)
 - Content: Right-aligned, responsive (50% desktop, 70% tablet, full mobile)
 
 ### Colors & Typography

@@ -13,13 +13,16 @@ get_header();
 ?>
 
 <!-- Hero Section -->
-<?php get_template_part('template-parts/main_hero'); ?>
+<?php get_template_part('template-parts/hero-zero'); ?>
 
 <!-- Statistics Section -->
 <?php get_template_part('template-parts/statistics'); ?>
 
+<!-- Hero Big Data Section -->
+<?php get_template_part('template-parts/hero-big-data'); ?>
+
 <!-- Hero Agriculture Section -->
-<?php get_template_part('template-parts/hero_agriculture'); ?>
+<?php get_template_part('template-parts/hero-agriculture'); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">

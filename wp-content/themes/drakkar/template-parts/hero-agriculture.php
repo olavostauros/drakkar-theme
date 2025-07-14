@@ -7,7 +7,7 @@
  */
 
 // Get the background image URL
-$hero_bg = get_template_directory_uri() . '/../../hero/hero_agriculture.png';
+$hero_bg = get_template_directory_uri() . '/../../hero-media/hero-agriculture.png';
 ?>
 
 <section class="hero-agriculture" style="background-image: url('<?php echo esc_url($hero_bg); ?>');">
